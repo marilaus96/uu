@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Canto de *Ramphastos Ambiguus*</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Características</a>
+</li>
+<li>
+  <a href="ob.html">Objetivos</a>
+</li>
+<li>
+  <a href="about.html">Metodología</a>
+</li>
+<li>
+  <a href="me.html">Resultados</a>
+</li>
+<li>
+  <a href="dis.html">Discusión</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="discusion" class="section level1">
+<h1>Discusión</h1>
+<p>La calidad de las grabaciones tiene mucho que ver con la calidad de los resultados, hay grabaciones donde los cambios en la señal, se dan en el mismo tracto, por lo que la longitud es variable, y a veces hay interferencias que no se pueden separar como eventos distintos dentro de un mismo tracto (Raven Pro Users Manual, 2010), estas interferencias se pueden deber a el ruido del ambiente producido por la comunidad de animales donde se tomó la grabación (Planqué &amp; Slabbekoorn 2008).</p>
+<p>Esto se relaciona a la entropía, la cual mide el grado de desorden en un tracto, al analizar la distribución energética, en la figura 1 se observa como los valores mínimos de entropía mínima los tiene Ecuador, y los máximos Costa Rica, indicando que los tractos tomados de Ecuador tienen menos desorden y tienen un tono más puro que los de Costa Rica, esto se puede deber a que las grabaciones de Ecuador tenían menos ruído por tracto que Costa Rica.</p>
+<p>La frecuencia también es una parte característica del canto, donde cada sílaba va a tener su propia frecuencia, las variaciones pequeñas en gestos del aparato respiratorio y de la siringe van a causar una variación el comportamiento del ave, donde después de repetidas ocasiones va a ser una acción estereotipada (Alonso, Goller &amp; Mindlin,2014 ), esto puede explicar porqué hay tanta variación el las frecuencias de R. ambiguus entre cada país.</p>
+<p>En un estudio realizado con ranas basado en las sílabas del canto, gracias a las métricas bioacústicas, se pudieron clasificar distintas especies de ranas basado en la señales del sonido (Dayou et al. 2011). Lo mismo se puede aplicar a R.ambiguus, ya que aunque no sea una comparación entre especies, si entre distintas poblaciones, que debido a factores geográficos, como diferencias en la vegetación, distancia entre las poblaciones y al estar ubicados a lo largo de estos países las condiciones climáticas cambian y esto puede crear patrones distintos de vocalización (Patané et al. 2009 ; Podos &amp; Warren 2007).</p>
+<p>Las diferencias en el canto, también se asocian con procesos culturales, se ha observado en Dendroica pensylvanica, que el comportamiento con respecto al canto varía geográficamente (Byers, 1996). Se ha determinado que la similitud de la canción se relaciona con la distancia entre aves, donde las canciones de las aves cercanas son más similares (Byers, 1996).. Esta variación microgeografía se puede asociar a copiado del sonido por parte de adultos o jóvenes, lo cual se puede asociar con similitudes entre las frecuencias de las sílabas, la longitud y el tiempo máximo (Byers, 1996; Peters et al. 2012). Esto puede generar que se creen dialectos dentro del mismo tipo de canto estereotipado para poblaciones en distintos países como es en este caso, gracias a procesos adaptativos</p>
+<p>Por otro lado se sabe que estas diferenciaciones se dan a nivel de genética, ya que estas características son importantes para diferenciar entre especies, y ayuda a aclarar filogenias, a nivel del ADNmt es que ocurren estos cambios, al ser algo genético va a transmitirse de generación en generación, y tiene sentido que hayan diferencias a lo largo de los países debido a esto, donde incluye podrían haber eventos de subespeciación (Weckstein , 2005). También se ha investigado que los dialectos de distintas poblaciones tienen un componente genético, donde están diferenciados a nivel molecular, como resultado del apareamiento de individuos vecinos o cercanos a una localidad (Podos &amp; Warren 2007).</p>
+</div>
+<div id="conclusiones" class="section level1">
+<h1>Conclusiones</h1>
+<p>Las diferencias en el canto de R.ambiguus entre los distintos países, reflejan procesos de separación geográfica, que debido a cambios en la vegetación y el clima pueden estar influyendo. Así como también es un proceso cultural, ya que hay cierto proceso de aprendizaje por parte de los individuos que hace que los más cercanos tengan canto similar. También estas diferencias presentan un componente genético, ya que hay diferenciaciones a nivel molecular como resultado de selección sexual. Las métricas que más entran influyendo en estas diferencias son largo del tracto, frecuencia alta, baja, frecuencia pico, al ser factores que varían entre cada país, y Costa Rica presentó los mayores valores para estas métricas que se relacionan entre sí.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
