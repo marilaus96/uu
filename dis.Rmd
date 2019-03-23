@@ -1,0 +1,24 @@
+
+
+#Discusión
+
+
+
+  La calidad de las grabaciones tiene mucho que ver con la calidad de los resultados, hay grabaciones donde los cambios en la señal, se dan en el mismo tracto, por lo que la longitud es variable, y a veces hay interferencias que no se pueden separar como eventos distintos dentro de un mismo tracto (Raven Pro Users Manual, 2010), estas interferencias se pueden deber a  el ruido del ambiente producido por la comunidad  de animales donde se tomó la grabación (Planqué & Slabbekoorn 2008).
+
+  Esto se relaciona a la entropía, la cual mide el grado de desorden en un tracto, al analizar la distribución energética, en la figura 1 se observa como los valores mínimos de entropía mínima los tiene Ecuador, y los máximos  Costa Rica, indicando que los tractos tomados de Ecuador tienen menos desorden y tienen un tono más puro que los de Costa Rica, esto se puede deber a que las grabaciones de Ecuador tenían menos ruído por tracto que  Costa Rica.
+
+  La frecuencia también es una parte característica del canto, donde cada sílaba va a tener su propia frecuencia,  las variaciones pequeñas en gestos del aparato respiratorio y de la siringe van a causar una variación  el comportamiento del ave, donde después de repetidas ocasiones va a ser una acción estereotipada (Alonso, Goller & Mindlin,2014 ), esto puede explicar porqué hay tanta variación el las frecuencias de R. ambiguus entre cada país.
+ 
+  En un estudio realizado con ranas basado en las sílabas del canto, gracias a las métricas bioacústicas, se pudieron clasificar distintas especies de ranas basado en la señales del sonido (Dayou et al. 2011). Lo mismo se puede aplicar a R.ambiguus, ya que  aunque no sea una comparación entre especies, si entre distintas poblaciones, que debido a factores geográficos, como diferencias en la vegetación, distancia entre las poblaciones y  al estar ubicados a lo largo de estos países las condiciones climáticas cambian  y esto puede crear patrones distintos de vocalización (Patané et al. 2009 ; Podos & Warren 2007).
+  
+  Las diferencias en el canto,  también se asocian con procesos culturales, se ha observado en Dendroica pensylvanica, que el comportamiento con respecto al canto varía geográficamente (Byers, 1996). Se ha determinado que la similitud de la canción se relaciona con  la distancia entre aves, donde las canciones de las aves cercanas son más similares (Byers, 1996).. Esta variación microgeografía se puede asociar a copiado del sonido por parte de adultos o jóvenes,  lo cual se puede asociar con similitudes entre  las frecuencias de las sílabas, la longitud y el tiempo máximo (Byers, 1996; Peters et al. 2012). Esto puede generar que se creen dialectos dentro del mismo tipo de canto estereotipado para poblaciones en distintos países como es en este caso, gracias a procesos adaptativos 
+ 
+  Por otro lado se sabe que estas diferenciaciones se dan a nivel de genética, ya que estas características son importantes para diferenciar entre especies, y ayuda a aclarar filogenias, a nivel del ADNmt es que ocurren estos cambios, al ser algo genético va a transmitirse de generación en generación, y tiene sentido que hayan diferencias a lo largo de los países debido a esto, donde incluye podrían haber eventos de subespeciación (Weckstein , 2005). También se ha investigado que los dialectos de distintas poblaciones tienen un componente genético, donde están diferenciados  a nivel molecular, como resultado del apareamiento de individuos vecinos o cercanos a una localidad (Podos & Warren 2007).
+
+
+
+#Conclusiones
+
+   Las diferencias en el canto de R.ambiguus entre los distintos países, reflejan procesos de separación geográfica, que debido a cambios en la vegetación y el clima pueden estar influyendo. Así como también es un proceso cultural, ya que hay cierto proceso de aprendizaje por parte de los individuos que hace que los más cercanos tengan canto similar. También estas diferencias presentan un componente genético, ya que hay diferenciaciones a nivel molecular como resultado de selección sexual. Las métricas que más entran influyendo en estas diferencias son largo del tracto, frecuencia alta, baja, frecuencia pico, al ser factores que varían entre cada país, y Costa Rica presentó los mayores valores para estas métricas que se relacionan entre sí.
+

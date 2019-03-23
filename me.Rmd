@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Resultados
+
+Las pruebas de Kruskal-Wallis realizadas para cada una de las métricas medidas demostraron que si hay diferencias el canto de *R.ambiguss*  entre Costa Rica, Panamá, Ecuador, Colombia y Venezuela. En el la figura 1, se puede observar como los promedios de la frecuencia alta  entre los distintos países difieren ( χ² =127.94, p> 0.05), los de frecuencia baja ( χ² = 317.72, p> 0.05), los de tiempo máximo ( χ² = 17.038, p> 0.05), así como los promedios de entropía máxima ( χ² =218.67 , p> 0.05), de energía ( χ² =101.87 , p> 0.05), frecuencia máxima ( χ² =55.62 , p> 0.05), máximo poder ( χ² =102.64 , p> 0.05), longitud ( χ² =  22.850, p> 0.05), entropía mínima  ( χ² =73.973 , p> 0.05) y frecuencia pico ( χ² = 52.869, p> 0.05).
+
+Los valores máximos de energía, frecuencia pico, frecuencia alta, longitud frecuencia máxima y poder máximo los obtuvo Costa Rica, y los valores mínimos los tuvo Panamá y en algunos casos se empató con Colombia, lo cual significa que las diferencias estuvieron en estos dos países.
+
+
+
+## Tabla de datos
+
+```{r}
+Tabla<- read.table("https://raw.githubusercontent.com/marilaus96/Ecoaves/master/tabla11.csv",sep = ";",dec =".", header=TRUE) 
+head(Tabla)
+```
+
+#Kruskal-Wallis para cada variable medida
+
+```{r}
+kruskal.test(H.F ~ Pais, data = Tabla)
+ kruskal.test(M.T ~ Pais, data = Tabla)
+ kruskal.test(E ~ Pais, data = Tabla)
+ kruskal.test(MA.E ~ Pais, data = Tabla) 
+ kruskal.test(M.F ~ Pais, data = Tabla)
+ kruskal.test(M.P ~ Pais, data = Tabla)
+ kruskal.test(P.F ~ Pais, data = Tabla) 
+ kruskal.test(L ~ Pais, data = Tabla)
+ kruskal.test(L.F ~ Pais, data = Tabla)
+```
+```{r}
+boxplot(Tabla$L.F~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"),ylab="Frecuencia Baja (Hz)" , xlab="País",ylim = c(0,2000))
+ boxplot(Tabla$H.F~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"),ylab="Frecuencia Alta (Hz)" , xlab="País",ylim = c(750,7000))
+ boxplot(Tabla$M.T~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Tiempo Máximo (s)" , xlab="País",ylim = c(0,30))
+ boxplot(Tabla$E~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Energía(dB)" , xlab="País",ylim = c(90,120)) 
+ boxplot(Tabla$MA.E~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Entropía Máxima (bits)" , xlab="País",ylim = c(3,7)) 
+ boxplot(Tabla$M.F~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Frecuencia Máxima (Hz)" , xlab="País",ylim = c(1000,4000)) 
+ boxplot(Tabla$M.P~Tabla$Pais, col=c("green","yellow", "red", "blue","orange"), ylab="Poder Máximo (dB)" , xlab="País",ylim = c(70,150)) 
+ boxplot(Tabla$MI.E~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Entropía Mínima (bits)" , xlab="País",ylim = c(0,2.5)) 
+ boxplot(Tabla$P.F~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Frecuencia Pico (Hz)" , xlab="País",ylim = c(1000,4000)) 
+ boxplot(Tabla$L~Tabla$Pais,col=c("green","yellow", "red", "blue","orange"), ylab="Longitud" , xlab="País",ylim = c(0,450)) 
+```

@@ -1,0 +1,26 @@
+name: "Ramphastos Ambiguss"
+navbar:
+  title: "Canto de *Ramphastos Ambiguus*"
+  left:
+    - text: "Características"
+      href: index.html
+    - text: "Objetivos"
+      href: ob.html 
+    - text: "Metodología"
+      href: about.html
+    - text: "Resultados"
+      href: me.html
+    - text: "Discusión"
+      href: dis.html
+    - text: "Bibliografia"
+      href: b.html
+      
+      
+    
+   
+output: 
+ html_document:
+  theme: spacelab
+
+      
+
