@@ -13,7 +13,7 @@
 
 
 <p align="justify">
-Determinar si existen diferencias en el canto de Ramphastos ambiguus en cinco países distribuidos a lo largo del neotropical 
+Determinar si existen diferencias en el canto de *Ramphastos ambiguus* en cinco países distribuidos a lo largo del neotropical 
 </p>
 
 
@@ -28,7 +28,8 @@ Determinar si existen diferencias en el canto de Ramphastos ambiguus en cinco pa
 
 
 
-
+<p align="justify">
 1. Utilizar el software Raven pro, para determinar las métricas bioacústicas del canto de R. ambiguus 
 2. Determinar cuáles métricas tienen mayor relevancia en la diferenciación del canto
 3. Investigar las consecuencias de la separación geográfica para el canto R.ambiguus a lo largo del neotrópico
+</p>
